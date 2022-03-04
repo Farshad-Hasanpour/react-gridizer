@@ -1,7 +1,3 @@
-import Row from './components/row';
-import Column from './components/column';
+export {default as Row} from './components/row';
+export {default as Col} from './components/column';
 
-export default {
-	Row,
-	Column
-}

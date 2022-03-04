@@ -9,7 +9,9 @@ const Column: React.FC<ColumnProps> = ({
 
 }): React.ReactElement => {
 	return (
-		<div>Column Works</div>
+		<div className={[styles['test-column'], 'test'].join(' ')}>
+			Column Works
+		</div>
 	);
 };
 

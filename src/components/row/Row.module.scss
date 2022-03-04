@@ -1,5 +1,5 @@
 @use "mixins.scss" as *;
 
-.testRow{
-	color: red;
+.test-row{
+	@include color(red);
 }

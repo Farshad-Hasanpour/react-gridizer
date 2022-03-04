@@ -6,7 +6,6 @@ module.exports = {
 	entry: {
 		index: [
 			path.resolve(`${__dirname}/../src/index.ts`),
-			path.resolve(`${__dirname}/../src/index.scss`)
 		]
 	},
 	resolve: {
@@ -29,7 +28,7 @@ module.exports = {
 			{
 				test: /\.(s[ac]ss)$/,
 				use: [
-					"style-loader",
+					"style-loader", // MiniCssExtractPlugin.loader
 					"css-loader",
 					{
 						loader: 'sass-loader',

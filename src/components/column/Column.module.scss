@@ -1,3 +1,5 @@
-.testColumn{
-	color: blue;
+@use "mixins.scss" as *;
+
+.test-column{
+	@include color(blue);
 }

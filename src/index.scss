@@ -1,7 +1,3 @@
-@mixin test{
-	overflow-y: auto;
-}
-
 .test{
-	@include test();
+	border: 2px dashed green;
 }
