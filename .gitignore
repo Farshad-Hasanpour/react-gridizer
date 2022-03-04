@@ -15,6 +15,7 @@ desktop.ini
 #builds 
 .dist/
 .build/
+.lib/
 
 node_modules/
 
