@@ -1,0 +1,7 @@
+@mixin test{
+	overflow-y: auto;
+}
+
+.test{
+	@include test();
+}

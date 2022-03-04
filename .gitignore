@@ -1,0 +1,24 @@
+.vscode/
+.idea/
+
+.npmrc
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# OS X
+.DS_Store
+.Spotlight-V100
+.Trashes
+
+#builds 
+.dist/
+.build/
+
+node_modules/
+
+.env
+.development.env
+.production.env
+.env.example
