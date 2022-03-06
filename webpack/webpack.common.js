@@ -1,11 +1,12 @@
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
 	entry: {
 		index: [
 			path.resolve(`${__dirname}/../src/index.ts`),
+			// path.resolve(`${__dirname}/../src/index.scss`),
 		]
 	},
 	resolve: {
@@ -25,10 +26,21 @@ module.exports = {
 				exclude: /node_modules/,
 				use: [{loader: 'babel-loader'}],
 			},
+			// {
+			// 	test: /\.(scss)$/,
+			// 	type: 'asset/resource',
+			// 	resourceQuery: path.resolve(`${__dirname}/../src/index.scss`),
+			// 	generator: {
+			// 		filename: '[name].min.css'
+			// 	},
+			// 	use: [
+			// 		'sass-loader'
+			// 	]
+			// },
 			{
 				test: /\.(s[ac]ss)$/,
 				use: [
-					"style-loader", // MiniCssExtractPlugin.loader
+					"style-loader",
 					"css-loader",
 					{
 						loader: 'sass-loader',
@@ -51,8 +63,13 @@ module.exports = {
 		new Dotenv({
 			safe: true
 		}),
-		new MiniCssExtractPlugin({
-			filename: '[name].css'
-		})
+		new CopyPlugin({
+			patterns: [
+				{
+					from: './src/index.css',
+					to: './index.css'
+				},
+			],
+		}),
 	],
 };

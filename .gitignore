@@ -13,9 +13,9 @@ desktop.ini
 .Trashes
 
 #builds 
-.dist/
-.build/
-.lib/
+dist/
+build/
+lib/
 
 node_modules/
 
