@@ -5,7 +5,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
 	entry: {
 		index: [
-			path.resolve(`${__dirname}/../src/index.ts`),
+			path.resolve(__dirname, '..', './src/index.ts'),
 			// path.resolve(`${__dirname}/../src/index.scss`),
 		]
 	},
@@ -14,7 +14,7 @@ module.exports = {
 	},
 	output:{
 		filename: '[name].js',
-		path: path.resolve(`${__dirname}/../lib`),
+		path: path.resolve(__dirname, '..', './lib'),
 		library: {
 			type: 'commonjs2',
 		},
@@ -41,13 +41,25 @@ module.exports = {
 				test: /\.(s[ac]ss)$/,
 				use: [
 					"style-loader",
-					"css-loader",
+					{
+						loader: "css-loader",
+						options:{
+							modules: {
+								auto: true, // default is undefined
+								localIdentName: "[name]__[local]--[hash:base64:5]",
+								//mode: "local", // default is local
+								// exportGlobals: false,  // default is false
+								// namedExport: false,  //default is false
+								// exportOnlyLocals: false,
+							},
+						}
+					},
 					{
 						loader: 'sass-loader',
 						options: {
 							sassOptions: {
 								includePaths: [
-									path.resolve(`${__dirname}/../src/sass`)
+									path.resolve(__dirname, '..', './src/sass')
 								],
 							},
 						},

@@ -1,7 +1,7 @@
 import {RowType} from './src/components/row/Row';
-import {ColumnType} from './src/components/column/Column';
+import {ColType} from './src/components/col/Col';
 
 declare module "@farshad-hasanpour/react-bidimensional-grid-system"{
 	export const Row: RowType;
-	export const Col: ColumnType;
+	export const Col: ColType;
 }

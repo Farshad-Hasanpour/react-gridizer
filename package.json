@@ -1,6 +1,6 @@
 {
 	"name": "@farshad-hasanpour/react-bidimensional-grid-system",
-	"version": "0.0.8",
+	"version": "0.0.14",
 	"description": "A bidirectional grid system for React. This grid systems supports both horizontal and vertical directions using flex display.",
 	"main": "./lib/index.js",
 	"repository": "https://github.com/farshad-hasanpour/react-bidimensional-grid-system",
