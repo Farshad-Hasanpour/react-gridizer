@@ -77,17 +77,8 @@
 	.col#{$breakpoint}-auto {
 		width: auto;
 	}
-
-	@if $breakpoint == null{
-		.row-#{$i} {
-			height: 100% * math.div($i, $default-grid-size);
-		}
-		.row-offset-#{$i} {
-			margin-top: 100% * math.div($i, $default-grid-size);
-		}
-		.row-order-#{$i} {
-			order: $i;
-		}
+	.col#{$breakpoint}-unset {
+		width: unset;
 	}
 }
 
