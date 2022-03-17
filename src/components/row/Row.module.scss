@@ -1,5 +1,6 @@
 @use "mixins.scss" as *;
 
-.test-row{
-	@include color(red);
+.row{
+	display: flex;
+	justify-content: s;
 }
