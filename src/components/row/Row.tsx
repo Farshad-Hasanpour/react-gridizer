@@ -1,10 +1,10 @@
-import React, {HTMLAttributes} from 'react';
+import React from 'react';
 import styles from './Row.module.scss';
 import {JustifyContent, AlignItems, AlignContent } from "../flexTypes";
 //Utilities
 import {classNames as $c} from "../../utils/functions";
 
-interface RowProps extends HTMLAttributes<HTMLElement> {
+interface RowProps extends React.HTMLAttributes<HTMLElement> {
 	"tag"?: React.ElementType,
 	"children"?: React.ReactNode,
 	"className"?: string,
@@ -82,8 +82,4 @@ const Row = React.forwardRef<HTMLElement, RowProps>(({
 });
 
 export type RowType = typeof Row;
-export default React.memo(Row, (prevProps, nextProps) => {
-	let prop: keyof typeof nextProps;
-	for(prop in nextProps) if(prevProps[prop] !== nextProps[prop]) return false;
-	return true;
-});
+export default Row;

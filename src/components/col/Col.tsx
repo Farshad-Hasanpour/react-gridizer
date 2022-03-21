@@ -1,10 +1,10 @@
-import React, {HTMLAttributes} from 'react';
+import React from 'react';
 import styles from './Col.module.scss';
 import { AlignSelf } from "../flexTypes";
 //Utilities
 import {classNames as $c} from "../../utils/functions";
 
-interface ColProps extends HTMLAttributes<HTMLElement> {
+interface ColProps extends React.HTMLAttributes<HTMLElement> {
 	"tag"?: React.ElementType,
 	"children"?: React.ReactNode,
 	"className"?: string,
@@ -90,8 +90,4 @@ const Col = React.forwardRef<HTMLElement, ColProps>(({
 });
 
 export type ColType = typeof Col;
-export default React.memo(Col, (prevProps, nextProps) => {
-	let prop: keyof typeof nextProps;
-	for(prop in nextProps) if(prevProps[prop] !== nextProps[prop]) return false;
-	return true;
-});
+export default Col;
