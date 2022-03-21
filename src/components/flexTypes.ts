@@ -29,22 +29,6 @@ export type AlignContent =
 	| 'stretch'
 	| 'unset';
 
-export type JustifyItems =
-	| 'baseline'
-	| 'center'
-	| 'end'
-	| 'inherit'
-	| 'initial'
-	| 'left'
-	| 'normal'
-	| 'revert'
-	| 'right'
-	| 'self-end'
-	| 'self-start'
-	| 'start'
-	| 'stretch'
-	| 'unset';
-
 export type AlignItems =
 	| 'baseline'
 	| 'center'

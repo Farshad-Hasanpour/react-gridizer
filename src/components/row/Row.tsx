@@ -1,6 +1,6 @@
 import React, {HTMLAttributes} from 'react';
 import styles from './Row.module.scss';
-import {JustifyContent, JustifyItems, AlignItems, AlignContent } from "../flexTypes";
+import {JustifyContent, AlignItems, AlignContent } from "../flexTypes";
 //Utilities
 import {classNames as $c} from "../../utils/functions";
 
@@ -15,11 +15,6 @@ interface RowProps extends HTMLAttributes<HTMLElement> {
 	"justify-md"?: JustifyContent,
 	"justify-lg"?: JustifyContent,
 	"justify-xl"?: JustifyContent,
-	"justify-items"?: JustifyItems,
-	"justify-items-sm"?: JustifyItems,
-	"justify-items-md"?: JustifyItems,
-	"justify-items-lg"?: JustifyItems,
-	"justify-items-xl"?: JustifyItems,
 	"align"?: AlignItems,
 	"align-sm"?: AlignItems,
 	"align-md"?: AlignItems,
@@ -43,11 +38,6 @@ const Row = React.forwardRef<HTMLElement, RowProps>(({
 	'justify-md': justifyMD,
 	'justify-lg': justifyLG,
 	'justify-xl': justifyXL,
-	'justify-items': justifyItems,
-	'justify-items-sm': justifyItemsSM,
-	'justify-items-md': justifyItemsMD,
-	'justify-items-lg': justifyItemsLG,
-	'justify-items-xl': justifyItemsXL,
 	'align': align,
 	'align-sm': alignSM,
 	'align-md': alignMD,
@@ -74,11 +64,6 @@ const Row = React.forwardRef<HTMLElement, RowProps>(({
 				justifyMD ? 'justify-md-'+justifyMD : '',
 				justifyLG ? 'justify-lg-'+justifyLG : '',
 				justifyXL ? 'justify-xl-'+justifyXL : '',
-				justifyItems ? 'justify-items-'+justifyItems : '',
-				justifyItemsSM ? 'justify-items-sm-'+justifyItemsSM : '',
-				justifyItemsMD ? 'justify-items-md-'+justifyItemsMD : '',
-				justifyItemsLG ? 'justify-items-lg-'+justifyItemsLG : '',
-				justifyItemsXL ? 'justify-items-xl-'+justifyItemsXL : '',
 				align ? 'align-'+align : '',
 				alignSM ? 'align-sm-'+alignSM : '',
 				alignMD ? 'align-md-'+alignMD : '',
