@@ -2,16 +2,6 @@
 @use "sass:math";
 @use "./variables.scss" as *;
 
-// .d-#{display}
-@mixin set-display-class($breakpoint){
-	$displays: none, flex, inline-flex;
-	@each $display in $displays {
-		.d#{$breakpoint}-#{$display} {
-			display: $display !important;
-		}
-	}
-}
-
 // flex utility classes like vuetify
 @mixin set-flex-class($breakpoint) {
 	$flex: (
@@ -37,11 +27,6 @@
 	$flex-directions: row, column, row-reverse, column-reverse;
 	@each $flex-direction in $flex-directions {
 		.flex#{$breakpoint}-#{$flex-direction} { flex-direction: $flex-direction !important; }
-	}
-
-	$flex-wraps: nowrap, wrap, wrap-reverse;
-	@each $flex-wrap in $flex-wraps {
-		.flex#{$breakpoint}-#{$flex-wrap} { flex-wrap: $flex-wrap !important; }
 	}
 
 	.flex#{$breakpoint}-grow-0{ flex-grow: 0 !important; }
@@ -79,6 +64,11 @@
 }
 
 
+@mixin generate($breakpoint){
+	@include set-flex-class($breakpoint);
+	@include set-grid-class($breakpoint);
+}
+
 $breakpoints: (
 	null: null,
 	-sm: sm-and-up,
@@ -88,14 +78,10 @@ $breakpoints: (
 );
 @each $breakpoint, $display in $breakpoints {
 	@if ($breakpoint == null) {
-		@include set-display-class($breakpoint);
-		@include set-flex-class($breakpoint);
-		@include set-grid-class($breakpoint);
+		@include generate($breakpoint);
 	} @else {
 		@media #{map.get($display-breakpoints, $display)} {
-			@include set-display-class($breakpoint);
-			@include set-flex-class($breakpoint);
-			@include set-grid-class($breakpoint);
+			@include generate($breakpoint);
 		}
 	}
 }

@@ -58,7 +58,7 @@ const Row = React.forwardRef<HTMLElement, RowProps>(({
 				styles['row'],
 				className,
 				gutters !== 'none' ? styles['gutters-'+gutters] : '',
-				reverse ? 'flex-row-reverse' : 'flex-wrap',
+				reverse ? 'flex-row-reverse' : '',
 				justify ? 'justify-'+justify : '',
 				justifySM ? 'justify-sm-'+justifySM : '',
 				justifyMD ? 'justify-md-'+justifyMD : '',
