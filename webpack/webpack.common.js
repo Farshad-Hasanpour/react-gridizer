@@ -6,7 +6,6 @@ module.exports = {
 	entry: {
 		index: [
 			path.resolve(__dirname, '..', './src/index.ts'),
-			// path.resolve(`${__dirname}/../src/index.scss`),
 		]
 	},
 	resolve: {
@@ -73,7 +72,7 @@ module.exports = {
 	},
 	plugins:[
 		new Dotenv({
-			safe: true
+			path: path.resolve(__dirname, '..', '.env')
 		}),
 		new CopyPlugin({
 			patterns: [
