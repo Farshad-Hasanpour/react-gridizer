@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Row.module.scss';
+import './Row.scss';
 import {JustifyContent, AlignItems, AlignContent } from "../flexTypes";
 //Utilities
 import {classNames as $c} from "../../utils/functions";
@@ -56,24 +56,24 @@ const Row = React.forwardRef<HTMLElement, RowProps>(({
 			ref={ref}
 			className={$c(
 				className,
-				styles['row'],
-				gutters !== 'none' ? styles['gutters--'+gutters] : '',
-				reverse ? styles['row--reverse'] : '',
-				justify ? styles['justify-'+justify] : '',
-				justifySM ? styles['justify-sm-'+justifySM] : '',
-				justifyMD ? styles['justify-md-'+justifyMD] : '',
-				justifyLG ? styles['justify-lg-'+justifyLG] : '',
-				justifyXL ? styles['justify-xl-'+justifyXL] : '',
-				align ? styles['align-'+align] : '',
-				alignSM ? styles['align-sm-'+alignSM] : '',
-				alignMD ? styles['align-md-'+alignMD] : '',
-				alignLG ? styles['align-lg-'+alignLG] : '',
-				alignXL ? styles['align-xl-'+alignXL] : '',
-				alignContent ? styles['align-'+alignContent] : '',
-				alignContentSM ? styles['align-content-sm-'+alignContentSM] : '',
-				alignContentMD ? styles['align-content-md-'+alignContentMD] : '',
-				alignContentLG ? styles['align-content-lg-'+alignContentLG] : '',
-				alignContentXL ? styles['align-content-xl-'+alignContentXL] : '',
+				'rr-row',
+				gutters !== 'none' ? 'rr-gutters--'+gutters : '',
+				reverse ? 'rr-row--reverse' : '',
+				justify ? 'rr-justify-'+justify : '',
+				justifySM ? 'rr-justify-sm-'+justifySM : '',
+				justifyMD ? 'rr-justify-md-'+justifyMD : '',
+				justifyLG ? 'rr-justify-lg-'+justifyLG : '',
+				justifyXL ? 'rr-justify-xl-'+justifyXL : '',
+				align ? 'rr-align-'+align : '',
+				alignSM ? 'rr-align-sm-'+alignSM : '',
+				alignMD ? 'rr-align-md-'+alignMD : '',
+				alignLG ? 'rr-align-lg-'+alignLG : '',
+				alignXL ? 'rr-align-xl-'+alignXL : '',
+				alignContent ? 'rr-align-'+alignContent : '',
+				alignContentSM ? 'rr-align-content-sm-'+alignContentSM : '',
+				alignContentMD ? 'rr-align-content-md-'+alignContentMD : '',
+				alignContentLG ? 'rr-align-content-lg-'+alignContentLG : '',
+				alignContentXL ? 'rr-align-content-xl-'+alignContentXL : '',
 			)}
 		>
 			{children}

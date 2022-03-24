@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Col.module.scss';
+import './Col.scss';
 import { AlignSelf } from "../flexTypes";
 //Utilities
 import {classNames as $c} from "../../utils/functions";
@@ -64,26 +64,26 @@ const Col = React.forwardRef<HTMLElement, ColProps>(({
 			ref={ref}
 			className={$c(
 				className,
-				cols ? styles['col-'+cols] : '',
-				sm ? styles['col-sm-'+sm] : '',
-				md ? styles['col-md-'+md] : '',
-				lg ? styles['col-lg-'+lg] : '',
-				xl ? styles['col-xl-'+xl] : '',
-				order ? styles['col-order-'+order] : '',
-				orderSM ? styles['col-order-sm-'+orderSM] : '',
-				orderMD ? styles['col-order-md-'+orderMD] : '',
-				orderLG ? styles['col-order-lg-'+orderLG] : '',
-				orderXL ? styles['col-order-xl-'+orderXL] : '',
-				offset ? styles['col-offset-'+offset] : '',
-				offsetSM ? styles['col-offset-sm-'+offsetSM] : '',
-				offsetMD ? styles['col-offset-md-'+offsetMD] : '',
-				offsetLG ? styles['col-offset-lg-'+offsetLG] : '',
-				offsetXL ? styles['col-offset-xl-'+offsetXL] : '',
-				alignSelf ? styles['align-self-'+alignSelf] : '',
-				alignSelfSM ? styles['align-self-sm-'+alignSelfSM] : '',
-				alignSelfMD ? styles['align-self-md-'+alignSelfMD] : '',
-				alignSelfLG ? styles['align-self-lg-'+alignSelfLG] : '',
-				alignSelfXL ? styles['align-self-xl-'+alignSelfXL] : '',
+				cols ? 'rr-col-'+cols : '',
+				sm ? 'rr-col-sm-'+sm : '',
+				md ? 'rr-col-md-'+md : '',
+				lg ? 'rr-col-lg-'+lg : '',
+				xl ? 'rr-col-xl-'+xl : '',
+				order ? 'rr-order-'+order : '',
+				orderSM ? 'rr-order-sm-'+orderSM : '',
+				orderMD ? 'rr-order-md-'+orderMD : '',
+				orderLG ? 'rr-order-lg-'+orderLG : '',
+				orderXL ? 'rr-order-xl-'+orderXL : '',
+				offset ? 'rr-offset-'+offset : '',
+				offsetSM ? 'rr-offset-sm-'+offsetSM : '',
+				offsetMD ? 'rr-offset-md-'+offsetMD : '',
+				offsetLG ? 'rr-offset-lg-'+offsetLG : '',
+				offsetXL ? 'rr-offset-xl-'+offsetXL : '',
+				alignSelf ? 'rr-align-self-'+alignSelf : '',
+				alignSelfSM ? 'rr-align-self-sm-'+alignSelfSM : '',
+				alignSelfMD ? 'rr-align-self-md-'+alignSelfMD : '',
+				alignSelfLG ? 'rr-align-self-lg-'+alignSelfLG : '',
+				alignSelfXL ? 'rr-align-self-xl-'+alignSelfXL : '',
 			)}
 		>
 			{children}

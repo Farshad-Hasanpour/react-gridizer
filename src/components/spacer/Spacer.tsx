@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Spacer.module.scss';
+import './Spacer.scss';
 //Utilities
 import {classNames as $c} from "../../utils/functions";
 
@@ -20,7 +20,7 @@ const Spacer = React.forwardRef<HTMLElement, SpacerProps>(({
 			{...otherProps}
 			ref={ref}
 			className={$c(
-				styles['spacer'],
+				'rr-spacer',
 				className,
 			)}
 		>

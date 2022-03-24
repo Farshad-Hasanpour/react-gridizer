@@ -26,34 +26,34 @@
 			@if ($item == justify) { $item: justify-content; }
 			@if ($item == align) { $item: align-items; }
 
-			.#{$flex-item}#{$breakpoint}-#{$flex-value} { #{$item}: $value !important; }
+			.rr-#{$flex-item}#{$breakpoint}-#{$flex-value} { #{$item}: $value !important; }
 		}
 	}
 }
 
 // .col-#{breakpoint}-#{value},
-// .col-offset-#{breakpoint}-#{value}
-// .col-order-#{breakpoint}-#{value}
+// .offset-#{breakpoint}-#{value}
+// .order-#{breakpoint}-#{value}
 @mixin set-grid-class($breakpoint) {
-	.col#{$breakpoint}-auto{
+	.rr-col#{$breakpoint}-auto{
 		flex-basis: 0;
 		flex-grow: 1;
 		max-width: 100%;
 	}
-	.col#{$breakpoint}-unset {
+	.rr-col#{$breakpoint}-unset {
 		flex-basis: fit-content;
 	}
 
 	@for $i from 1 through $default-grid-size {
 		$size: 100% * math.div($i, $default-grid-size);
-		.col#{$breakpoint}-#{$i} {
+		.rr-col#{$breakpoint}-#{$i} {
 			flex-basis: $size;
 			max-width: $size;
 		}
-		.col-offset#{$breakpoint}-#{$i} {
+		.rr-offset#{$breakpoint}-#{$i} {
 			margin-inline-start: $size;
 		}
-		.col-order#{$breakpoint}-#{$i} {
+		.rr-order#{$breakpoint}-#{$i} {
 			order: $i;
 		}
 	}
