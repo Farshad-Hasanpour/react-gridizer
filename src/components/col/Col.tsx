@@ -4,15 +4,17 @@ import { AlignSelf } from "../flexTypes";
 //Utilities
 import {classNames as $c} from "../../utils/functions";
 
+type Size = number | 'unset' | 'auto' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12';
+
 interface ColProps extends React.HTMLAttributes<HTMLElement> {
 	"tag"?: React.ElementType,
 	"children"?: React.ReactNode,
 	"className"?: string,
-	"cols"?: number | 'unset' | 'auto',
-	"sm"?: number | 'unset' | 'auto',
-	"md"?: number | 'unset' | 'auto',
-	"lg"?: number | 'unset' | 'auto',
-	"xl"?: number | 'unset' | 'auto',
+	"cols"?: Size,
+	"sm"?: Size,
+	"md"?: Size,
+	"lg"?: Size,
+	"xl"?: Size,
 	"order"?: number,
 	"order-sm"?: number,
 	"order-md"?: number,
