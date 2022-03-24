@@ -41,23 +41,6 @@ export type AlignItems =
 	| 'stretch'
 	| 'unset';
 
-export type JustifySelf =
-	| 'auto'
-	| 'baseline'
-	| 'center'
-	| 'end'
-	| 'inherit'
-	| 'initial'
-	| 'left'
-	| 'normal'
-	| 'revert'
-	| 'right'
-	| 'self-end'
-	| 'self-start'
-	| 'start'
-	| 'stretch'
-	| 'unset';
-
 export type AlignSelf =
 	| 'auto'
 	| 'baseline'
