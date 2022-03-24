@@ -1,6 +1,6 @@
 {
 	"name": "@farshad-hasanpour/react-bidimensional-grid-system",
-	"version": "0.0.24",
+	"version": "0.0.25",
 	"description": "A bidirectional grid system for React. This grid systems supports both horizontal and vertical directions using flex display.",
 	"main": "./lib/index.js",
 	"repository": "https://github.com/farshad-hasanpour/react-bidimensional-grid-system",
@@ -9,10 +9,9 @@
 	},
 	"types": "index.d.ts",
 	"scripts": {
-		"build": "rm -rf ./lib && sass src/index.scss src/index.css --no-source-map --style compressed && webpack --config ./webpack/webpack.config.js --env MODE=prod",
-		"analyze": "yarn build -- ANALYZE && yarn remove-extra",
-		"prepare": "yarn build && yarn remove-extra",
-		"remove-extra": "rm -f ./src/index.css",
+		"build": "rm -rf ./lib && webpack --config ./webpack/webpack.config.js --env MODE=prod",
+		"analyze": "yarn build -- ANALYZE",
+		"prepare": "yarn build",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "Farshad Hasanpour",

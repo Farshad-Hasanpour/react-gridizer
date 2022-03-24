@@ -1,14 +1,36 @@
+@use "mixins.scss" as *;
+
 .row{
 	display: flex;
 	flex-wrap: wrap;
 }
-.row.gutters-normal{
+.row--reverse{
+	flex-direction: row-reverse;
+}
+.row.gutters--normal{
 	> *{
 		padding: 12px;
 	}
 }
-.row.gutters-dense{
+.row.gutters--dense{
 	> *{
 		padding: 8px;
+	}
+}
+
+$breakpoints: (
+		null: null,
+		-sm: sm-and-up,
+		-md: md-and-up,
+		-lg: lg-and-up,
+		-xl: xl-only,
+);
+@each $breakpoint, $display in $breakpoints {
+	@if ($breakpoint == null) {
+		@include set-flex-class($breakpoint, $type: row);
+	} @else {
+		@media #{map.get($display-breakpoints, $display)} {
+			@include set-flex-class($breakpoint, $type: row);
+		}
 	}
 }

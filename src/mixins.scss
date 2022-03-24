@@ -1,0 +1,59 @@
+@use "sass:map";
+@use "sass:math";
+@use "./variables.scss" as *;
+
+// utility flex classes
+@mixin set-flex-class($breakpoint, $type) {
+	@if($type == col){
+		$flex-map: (
+				align-self: (auto, baseline, center, end, inherit, initial, normal, revert, self-end, self-start, start, stretch, unset),
+		);
+	} @else if(type == row) {
+		$flex-map: (
+				justify: (center, end, inherit, initial, left, normal, revert, right, space-around, space-between, space-evenly, start, stretch, unset),
+				align-content: (baseline, center, end, inherit, initial, normal, revert, space-around, space-between, space-evenly, start, stretch, unset),
+				align: (baseline, center, end, inherit, initial, normal, revert, start, stretch, unset),
+		);
+	}
+
+	@each $flex-item, $flex-values in $flex-map {
+		@each $flex-value in $flex-values{
+			$value: $flex-value;
+			$item: $flex-item;
+			@if ($value == start) { $value: flex-start; }
+			@if ($value == end) { $value: flex-end; }
+			@if ($item == justify) { $item: justify-content; }
+			@if ($item == align) { $item: align-items; }
+
+			.#{$flex-item}#{$breakpoint}-#{$flex-value} { #{$item}: $value !important; }
+		}
+	}
+}
+
+// .col-#{breakpoint}-#{value},
+// .col-offset-#{breakpoint}-#{value}
+// .col-order-#{breakpoint}-#{value}
+@mixin set-grid-class($breakpoint) {
+	.col#{$breakpoint}-auto{
+		flex-basis: 0;
+		flex-grow: 1;
+		max-width: 100%;
+	}
+	.col#{$breakpoint}-unset {
+		flex-basis: fit-content;
+	}
+
+	@for $i from 1 through $default-grid-size {
+		$size: 100% * math.div($i, $default-grid-size);
+		.col#{$breakpoint}-#{$i} {
+			flex-basis: $size;
+			max-width: $size;
+		}
+		.col-offset#{$breakpoint}-#{$i} {
+			margin-inline-start: $size;
+		}
+		.col-order#{$breakpoint}-#{$i} {
+			order: $i;
+		}
+	}
+}
