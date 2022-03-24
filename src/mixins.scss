@@ -7,13 +7,13 @@
 	$flex-map: ();
 	@if($type == col){
 		$flex-map: (
-				align-self: (auto, baseline, center, end, inherit, initial, normal, revert, self-end, self-start, start, stretch, unset),
+				align-self: (auto, baseline, center, end, flex-start, flex-end, inherit, initial, normal, revert, self-end, self-start, start, stretch, unset),
 		);
 	} @else if($type == row) {
 		$flex-map: (
-				justify: (center, end, inherit, initial, left, normal, revert, right, space-around, space-between, space-evenly, start, stretch, unset),
-				align-content: (baseline, center, end, inherit, initial, normal, revert, space-around, space-between, space-evenly, start, stretch, unset),
-				align: (baseline, center, end, inherit, initial, normal, revert, start, stretch, unset),
+				justify: (center, end, flex-start, flex-end, inherit, initial, left, normal, revert, right, space-around, space-between, space-evenly, start, stretch, unset),
+				align-content: (baseline, center, end, flex-start, flex-end, inherit, initial, normal, revert, space-around, space-between, space-evenly, start, stretch, unset),
+				align: (baseline, center, end, flex-start, flex-end, inherit, initial, normal, revert, start, stretch, unset),
 		);
 	}
 
