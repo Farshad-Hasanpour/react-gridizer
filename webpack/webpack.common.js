@@ -1,6 +1,6 @@
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
-const CopyPlugin = require("copy-webpack-plugin");
+// const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
 	entry: {
@@ -58,7 +58,7 @@ module.exports = {
 						options: {
 							sassOptions: {
 								includePaths: [
-									path.resolve(__dirname, '..', './src/sass')
+									path.resolve(__dirname, '..', './src')
 								],
 							},
 						},
@@ -74,13 +74,13 @@ module.exports = {
 		new Dotenv({
 			path: path.resolve(__dirname, '..', '.env')
 		}),
-		new CopyPlugin({
-			patterns: [
-				{
-					from: './src/index.css',
-					to: './index.css'
-				},
-			],
-		}),
+		// new CopyPlugin({
+		// 	patterns: [
+		// 		{
+		// 			from: './src/index.css',
+		// 			to: './index.css'
+		// 		},
+		// 	],
+		// }),
 	],
 };

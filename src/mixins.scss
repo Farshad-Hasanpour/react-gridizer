@@ -1,9 +1,10 @@
 @use "sass:map";
 @use "sass:math";
-@use "./variables.scss" as *;
+@use "variables.scss" as *;
 
 // utility flex classes
 @mixin set-flex-class($breakpoint, $type) {
+	$flex-map: ();
 	@if($type == col){
 		$flex-map: (
 				align-self: (auto, baseline, center, end, inherit, initial, normal, revert, self-end, self-start, start, stretch, unset),
