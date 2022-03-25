@@ -2,19 +2,19 @@
 @use "mixins.scss" as *;
 @use "sass:map";
 
-.rr-row{
+.#{$prefix}row{
 	display: flex;
 	flex-wrap: wrap;
 }
-.rr-row--reverse{
+.#{$prefix}row--reverse{
 	flex-direction: row-reverse;
 }
-.rr-row.rr-gutters--normal{
+.#{$prefix}row.rr-gutters--normal{
 	> *{
 		padding: 12px;
 	}
 }
-.rr-row.rr-gutters--dense{
+.#{$prefix}row.rr-gutters--dense{
 	> *{
 		padding: 8px;
 	}

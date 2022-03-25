@@ -1,3 +1,5 @@
-.rr-spacer{
+@use "variables.scss" as *;
+
+.#{$prefix}spacer{
 	flex-grow: 1 !important;
 }

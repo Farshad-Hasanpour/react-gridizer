@@ -7,13 +7,13 @@
 	$flex-map: ();
 	@if($type == col){
 		$flex-map: (
-				align-self: (auto, baseline, center, end, flex-start, flex-end, inherit, initial, normal, revert, self-end, self-start, start, stretch, unset),
+				align-self: (auto, baseline, center, end, flex-start, flex-end, normal, self-end, self-start, start, stretch),
 		);
 	} @else if($type == row) {
 		$flex-map: (
-				justify: (center, end, flex-start, flex-end, inherit, initial, left, normal, revert, right, space-around, space-between, space-evenly, start, stretch, unset),
-				align-content: (baseline, center, end, flex-start, flex-end, inherit, initial, normal, revert, space-around, space-between, space-evenly, start, stretch, unset),
-				align: (baseline, center, end, flex-start, flex-end, inherit, initial, normal, revert, start, stretch, unset),
+				justify: (center, end, flex-start, flex-end, left, normal, right, space-around, space-between, space-evenly, start, stretch),
+				align-content: (baseline, center, end, flex-start, flex-end, normal, space-around, space-between, space-evenly, start, stretch),
+				align: (baseline, center, end, flex-start, flex-end, normal, start, stretch),
 		);
 	}
 
@@ -26,7 +26,7 @@
 			@if ($item == justify) { $item: justify-content; }
 			@if ($item == align) { $item: align-items; }
 
-			.rr-#{$flex-item}#{$breakpoint}-#{$flex-value} { #{$item}: $value !important; }
+			.#{$prefix}#{$flex-item}#{$breakpoint}-#{$flex-value} { #{$item}: $value !important; }
 		}
 	}
 }
@@ -35,25 +35,25 @@
 // .offset-#{breakpoint}-#{value}
 // .order-#{breakpoint}-#{value}
 @mixin set-grid-class($breakpoint) {
-	.rr-col#{$breakpoint}-auto{
+	.#{$prefix}col#{$breakpoint}-auto{
 		flex-basis: 0;
 		flex-grow: 1;
 		max-width: 100%;
 	}
-	.rr-col#{$breakpoint}-unset {
+	.#{$prefix}col#{$breakpoint}-unset {
 		flex-basis: fit-content;
 	}
 
 	@for $i from 1 through $default-grid-size {
 		$size: 100% * math.div($i, $default-grid-size);
-		.rr-col#{$breakpoint}-#{$i} {
+		.#{$prefix}col#{$breakpoint}-#{$i} {
 			flex-basis: $size;
 			max-width: $size;
 		}
-		.rr-offset#{$breakpoint}-#{$i} {
+		.#{$prefix}offset#{$breakpoint}-#{$i} {
 			margin-inline-start: $size;
 		}
-		.rr-order#{$breakpoint}-#{$i} {
+		.#{$prefix}order#{$breakpoint}-#{$i} {
 			order: $i;
 		}
 	}

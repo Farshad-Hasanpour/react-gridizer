@@ -3,18 +3,14 @@ export type JustifyContent =
 	| 'end'
 	| 'flex-start'
 	| 'flex-end'
-	| 'inherit'
-	| 'initial'
 	| 'left'
 	| 'normal'
-	| 'revert'
 	| 'right'
 	| 'space-around'
 	| 'space-between'
 	| 'space-evenly'
 	| 'start'
-	| 'stretch'
-	| 'unset';
+	| 'stretch';
 
 export type AlignContent =
 	| 'baseline'
@@ -22,16 +18,12 @@ export type AlignContent =
 	| 'end'
 	| 'flex-start'
 	| 'flex-end'
-	| 'inherit'
-	| 'initial'
 	| 'normal'
-	| 'revert'
 	| 'space-around'
 	| 'space-between'
 	| 'space-evenly'
 	| 'start'
-	| 'stretch'
-	| 'unset';
+	| 'stretch';
 
 export type AlignItems =
 	| 'baseline'
@@ -39,13 +31,9 @@ export type AlignItems =
 	| 'end'
 	| 'flex-start'
 	| 'flex-end'
-	| 'inherit'
-	| 'initial'
 	| 'normal'
-	| 'revert'
 	| 'start'
-	| 'stretch'
-	| 'unset';
+	| 'stretch';
 
 export type AlignSelf =
 	| 'auto'
@@ -54,12 +42,8 @@ export type AlignSelf =
 	| 'end'
 	| 'flex-start'
 	| 'flex-end'
-	| 'inherit'
-	| 'initial'
 	| 'normal'
-	| 'revert'
 	| 'self-end'
 	| 'self-start'
 	| 'start'
-	| 'stretch'
-	| 'unset';
+	| 'stretch';
