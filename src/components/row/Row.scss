@@ -1,6 +1,7 @@
 @use "variables.scss" as *;
 @use "mixins.scss" as *;
 @use "sass:map";
+// $prefix variable is read from .env file
 
 .#{$prefix}row{
 	display: flex;
@@ -22,10 +23,10 @@
 
 @each $breakpoint, $display in $breakpoints {
 	@if ($breakpoint == null) {
-		@include set-flex-class($breakpoint, $type: row);
+		@include set-flex-class($breakpoint, row, $prefix);
 	} @else {
 		@media #{map.get($display-breakpoints, $display)} {
-			@include set-flex-class($breakpoint, $type: row);
+			@include set-flex-class($breakpoint, row, $prefix);
 		}
 	}
 }

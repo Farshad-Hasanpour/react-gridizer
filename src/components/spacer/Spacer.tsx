@@ -15,12 +15,13 @@ const Spacer = React.forwardRef<HTMLElement, SpacerProps>(({
 	className = '',
 	...otherProps
 }, ref) => {
+	const prefix = process.env.CSS_PREFIX || '';
 	return (
 		<Tag
 			{...otherProps}
 			ref={ref}
 			className={$c(
-				'rr-spacer',
+				prefix+'spacer',
 				className,
 			)}
 		>

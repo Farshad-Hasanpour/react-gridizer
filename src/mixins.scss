@@ -3,7 +3,7 @@
 @use "variables.scss" as *;
 
 // utility flex classes
-@mixin set-flex-class($breakpoint, $type) {
+@mixin set-flex-class($breakpoint, $type, $prefix: null) {
 	$flex-map: ();
 	@if($type == col){
 		$flex-map: (
@@ -34,7 +34,7 @@
 // .col-#{breakpoint}-#{value},
 // .offset-#{breakpoint}-#{value}
 // .order-#{breakpoint}-#{value}
-@mixin set-grid-class($breakpoint) {
+@mixin set-grid-class($breakpoint, $prefix: null) {
 	.#{$prefix}col#{$breakpoint}-auto{
 		flex-basis: 0;
 		flex-grow: 1;

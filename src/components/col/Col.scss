@@ -1,15 +1,16 @@
 @use "variables.scss" as *;
 @use "mixins.scss" as *;
 @use "sass:map";
+// $prefix variable is read from .env file
 
 @each $breakpoint, $display in $breakpoints {
 	@if ($breakpoint == null) {
-		@include set-flex-class($breakpoint, $type: col);
-		@include set-grid-class($breakpoint);
+		@include set-flex-class($breakpoint, col, $prefix);
+		@include set-grid-class($breakpoint, $prefix);
 	} @else {
 		@media #{map.get($display-breakpoints, $display)} {
-			@include set-flex-class($breakpoint, $type: col);
-			@include set-grid-class($breakpoint);
+			@include set-flex-class($breakpoint, col, $prefix);
+			@include set-grid-class($breakpoint, $prefix);
 		}
 	}
 }

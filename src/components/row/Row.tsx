@@ -50,6 +50,7 @@ const Row = React.forwardRef<HTMLElement, RowProps>(({
 	'align-content-xl': alignContentXL,
 	...otherProps
 }, ref) => {
+	const prefix = process.env.CSS_PREFIX || '';
 	return (
 		<Tag
 			{...otherProps}
@@ -57,23 +58,23 @@ const Row = React.forwardRef<HTMLElement, RowProps>(({
 			className={$c(
 				className,
 				'rr-row',
-				gutters !== 'none' ? 'rr-gutters--'+gutters : '',
-				reverse ? 'rr-row--reverse' : '',
-				justify ? 'rr-justify-'+justify : '',
-				justifySM ? 'rr-justify-sm-'+justifySM : '',
-				justifyMD ? 'rr-justify-md-'+justifyMD : '',
-				justifyLG ? 'rr-justify-lg-'+justifyLG : '',
-				justifyXL ? 'rr-justify-xl-'+justifyXL : '',
-				align ? 'rr-align-'+align : '',
-				alignSM ? 'rr-align-sm-'+alignSM : '',
-				alignMD ? 'rr-align-md-'+alignMD : '',
-				alignLG ? 'rr-align-lg-'+alignLG : '',
-				alignXL ? 'rr-align-xl-'+alignXL : '',
-				alignContent ? 'rr-align-'+alignContent : '',
-				alignContentSM ? 'rr-align-content-sm-'+alignContentSM : '',
-				alignContentMD ? 'rr-align-content-md-'+alignContentMD : '',
-				alignContentLG ? 'rr-align-content-lg-'+alignContentLG : '',
-				alignContentXL ? 'rr-align-content-xl-'+alignContentXL : '',
+				gutters !== 'none' ? prefix+'gutters--'+gutters : '',
+				reverse ? prefix+'row--reverse' : '',
+				justify ? prefix+'justify-'+justify : '',
+				justifySM ? prefix+'justify-sm-'+justifySM : '',
+				justifyMD ? prefix+'justify-md-'+justifyMD : '',
+				justifyLG ? prefix+'justify-lg-'+justifyLG : '',
+				justifyXL ? prefix+'justify-xl-'+justifyXL : '',
+				align ? prefix+'align-'+align : '',
+				alignSM ? prefix+'align-sm-'+alignSM : '',
+				alignMD ? prefix+'align-md-'+alignMD : '',
+				alignLG ? prefix+'align-lg-'+alignLG : '',
+				alignXL ? prefix+'align-xl-'+alignXL : '',
+				alignContent ? prefix+'align-'+alignContent : '',
+				alignContentSM ? prefix+'align-content-sm-'+alignContentSM : '',
+				alignContentMD ? prefix+'align-content-md-'+alignContentMD : '',
+				alignContentLG ? prefix+'align-content-lg-'+alignContentLG : '',
+				alignContentXL ? prefix+'align-content-xl-'+alignContentXL : '',
 			)}
 		>
 			{children}

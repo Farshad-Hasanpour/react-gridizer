@@ -58,32 +58,33 @@ const Col = React.forwardRef<HTMLElement, ColProps>(({
 	'align-self-xl': alignSelfXL,
 	...otherProps
 }, ref) => {
+	const prefix = process.env.CSS_PREFIX || '';
 	return (
 		<Tag
 			{...otherProps}
 			ref={ref}
 			className={$c(
 				className,
-				cols ? 'rr-col-'+cols : '',
-				sm ? 'rr-col-sm-'+sm : '',
-				md ? 'rr-col-md-'+md : '',
-				lg ? 'rr-col-lg-'+lg : '',
-				xl ? 'rr-col-xl-'+xl : '',
-				order ? 'rr-order-'+order : '',
-				orderSM ? 'rr-order-sm-'+orderSM : '',
-				orderMD ? 'rr-order-md-'+orderMD : '',
-				orderLG ? 'rr-order-lg-'+orderLG : '',
-				orderXL ? 'rr-order-xl-'+orderXL : '',
-				offset ? 'rr-offset-'+offset : '',
-				offsetSM ? 'rr-offset-sm-'+offsetSM : '',
-				offsetMD ? 'rr-offset-md-'+offsetMD : '',
-				offsetLG ? 'rr-offset-lg-'+offsetLG : '',
-				offsetXL ? 'rr-offset-xl-'+offsetXL : '',
-				alignSelf ? 'rr-align-self-'+alignSelf : '',
-				alignSelfSM ? 'rr-align-self-sm-'+alignSelfSM : '',
-				alignSelfMD ? 'rr-align-self-md-'+alignSelfMD : '',
-				alignSelfLG ? 'rr-align-self-lg-'+alignSelfLG : '',
-				alignSelfXL ? 'rr-align-self-xl-'+alignSelfXL : '',
+				cols ? prefix+'col-'+cols : '',
+				sm ? prefix+'col-sm-'+sm : '',
+				md ? prefix+'col-md-'+md : '',
+				lg ? prefix+'col-lg-'+lg : '',
+				xl ? prefix+'col-xl-'+xl : '',
+				order ? prefix+'order-'+order : '',
+				orderSM ? prefix+'order-sm-'+orderSM : '',
+				orderMD ? prefix+'order-md-'+orderMD : '',
+				orderLG ? prefix+'order-lg-'+orderLG : '',
+				orderXL ? prefix+'order-xl-'+orderXL : '',
+				offset ? prefix+'offset-'+offset : '',
+				offsetSM ? prefix+'offset-sm-'+offsetSM : '',
+				offsetMD ? prefix+'offset-md-'+offsetMD : '',
+				offsetLG ? prefix+'offset-lg-'+offsetLG : '',
+				offsetXL ? prefix+'offset-xl-'+offsetXL : '',
+				alignSelf ? prefix+'align-self-'+alignSelf : '',
+				alignSelfSM ? prefix+'align-self-sm-'+alignSelfSM : '',
+				alignSelfMD ? prefix+'align-self-md-'+alignSelfMD : '',
+				alignSelfLG ? prefix+'align-self-lg-'+alignSelfLG : '',
+				alignSelfXL ? prefix+'align-self-xl-'+alignSelfXL : '',
 			)}
 		>
 			{children}
