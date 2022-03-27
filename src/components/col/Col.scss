@@ -6,6 +6,6 @@
 @each $breakpoint, $media in $breakpoints {
 	@include generator($media){
 		@include breakpoint-flex-classes($breakpoint, col, $prefix);
-		@include breakpoint-grid-classes($breakpoint, $prefix);
+		@include breakpoint-col-classes($breakpoint, $prefix);
 	}
 }
