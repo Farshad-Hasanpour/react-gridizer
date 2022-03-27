@@ -15,7 +15,10 @@ module.exports = async (envVars) => {
 	}).parsed;
 
 	return merge(
-		require('./webpack.common')(parsedEnv.CSS_PREFIX || parsedCommonEnv.CSS_PREFIX || ''),
+		require('./webpack.common')(
+			parsedEnv.CSS_PREFIX || parsedCommonEnv.CSS_PREFIX || '',
+			parsedEnv.CSS_TOTAL_COLS || parsedCommonEnv.CSS_TOTAL_COLS || 12
+		),
 		require(`./webpack.${MODE}.js`)(envVars),
 	);
 };

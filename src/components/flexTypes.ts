@@ -1,10 +1,7 @@
 export type JustifyContent =
 	| 'center'
 	| 'end'
-	| 'flex-start'
-	| 'flex-end'
 	| 'left'
-	| 'normal'
 	| 'right'
 	| 'space-around'
 	| 'space-between'
@@ -16,9 +13,6 @@ export type AlignContent =
 	| 'baseline'
 	| 'center'
 	| 'end'
-	| 'flex-start'
-	| 'flex-end'
-	| 'normal'
 	| 'space-around'
 	| 'space-between'
 	| 'space-evenly'
@@ -29,9 +23,6 @@ export type AlignItems =
 	| 'baseline'
 	| 'center'
 	| 'end'
-	| 'flex-start'
-	| 'flex-end'
-	| 'normal'
 	| 'start'
 	| 'stretch';
 
@@ -40,10 +31,5 @@ export type AlignSelf =
 	| 'baseline'
 	| 'center'
 	| 'end'
-	| 'flex-start'
-	| 'flex-end'
-	| 'normal'
-	| 'self-end'
-	| 'self-start'
 	| 'start'
 	| 'stretch';

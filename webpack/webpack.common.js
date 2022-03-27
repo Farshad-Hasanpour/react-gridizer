@@ -3,7 +3,7 @@ const Dotenv = require('dotenv-webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // const CopyPlugin = require("copy-webpack-plugin");
 
-module.exports = (cssPrefix) => ({
+module.exports = (cssPrefix, $totalCols = 12) => ({
 	entry: {
 		index: [
 			path.resolve(__dirname, '..', './src/index.ts'),
@@ -62,7 +62,7 @@ module.exports = (cssPrefix) => ({
 									path.resolve(__dirname, '..', './src')
 								],
 							},
-							additionalData: `$prefix: ${cssPrefix || 'null'};`,
+							additionalData: `$prefix: ${cssPrefix || 'null'}; $total-cols: ${$totalCols};`,
 						},
 					},
 				],

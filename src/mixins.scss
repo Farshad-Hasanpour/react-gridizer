@@ -7,13 +7,13 @@
 	$flex-map: ();
 	@if($type == col){
 		$flex-map: (
-				align-self: (auto, baseline, center, end, flex-start, flex-end, normal, self-end, self-start, start, stretch),
+				align-self: (auto, baseline, center, end, self-end, self-start, start, stretch),
 		);
 	} @else if($type == row) {
 		$flex-map: (
-				justify: (center, end, flex-start, flex-end, left, normal, right, space-around, space-between, space-evenly, start, stretch),
-				align-content: (baseline, center, end, flex-start, flex-end, normal, space-around, space-between, space-evenly, start, stretch),
-				align: (baseline, center, end, flex-start, flex-end, normal, start, stretch),
+				justify: (center, end, left, right, space-around, space-between, space-evenly, start, stretch),
+				align-content: (baseline, center, end, space-around, space-between, space-evenly, start, stretch),
+				align: (baseline, center, end, start, stretch),
 		);
 	}
 
@@ -34,7 +34,7 @@
 // .col-#{breakpoint}-#{value},
 // .offset-#{breakpoint}-#{value}
 // .order-#{breakpoint}-#{value}
-@mixin set-grid-class($breakpoint, $prefix: null) {
+@mixin set-grid-class($breakpoint, $prefix: null, $total-cols: 12) {
 	.#{$prefix}col#{$breakpoint}-auto{
 		flex-basis: 0;
 		flex-grow: 1;
@@ -44,8 +44,8 @@
 		flex-basis: fit-content;
 	}
 
-	@for $i from 1 through $default-grid-size {
-		$size: 100% * math.div($i, $default-grid-size);
+	@for $i from 1 through $total-cols {
+		$size: 100% * math.div($i, $total-cols);
 		.#{$prefix}col#{$breakpoint}-#{$i} {
 			flex-basis: $size;
 			max-width: $size;
