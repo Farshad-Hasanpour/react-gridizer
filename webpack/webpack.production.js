@@ -14,7 +14,6 @@ module.exports = envVars => {
 
 	return {
 		mode: 'production',
-		devtool: 'source-map',
 		plugins
 	}
 };
