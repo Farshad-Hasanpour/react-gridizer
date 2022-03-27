@@ -21,12 +21,8 @@
 	}
 }
 
-@each $breakpoint, $display in $breakpoints {
-	@if ($breakpoint == null) {
-		@include set-flex-class($breakpoint, row, $prefix);
-	} @else {
-		@media #{map.get($display-breakpoints, $display)} {
-			@include set-flex-class($breakpoint, row, $prefix);
-		}
+@each $breakpoint, $media in $breakpoints {
+	@include generator($media){
+		@include breakpoint-flex-classes($breakpoint, row, $prefix);
 	}
 }

@@ -2,8 +2,17 @@
 @use "sass:math";
 @use "variables.scss" as *;
 
-// utility flex classes
-@mixin set-flex-class($breakpoint, $type, $prefix: null) {
+@mixin generator($media){
+	@if ($media == null) {
+		@content
+	} @else {
+		@media #{$media} {
+			@content
+		}
+	}
+}
+
+@mixin breakpoint-flex-classes($breakpoint, $type, $prefix: null) {
 	$flex-map: ();
 	@if($type == col){
 		$flex-map: (
@@ -21,20 +30,19 @@
 		@each $flex-value in $flex-values{
 			$value: $flex-value;
 			$item: $flex-item;
+
 			@if ($value == start) { $value: flex-start; }
-			@if ($value == end) { $value: flex-end; }
+			@else if ($value == end) { $value: flex-end; }
+
 			@if ($item == justify) { $item: justify-content; }
-			@if ($item == align) { $item: align-items; }
+			@else if ($item == align) { $item: align-items; }
 
 			.#{$prefix}#{$flex-item}#{$breakpoint}-#{$flex-value} { #{$item}: $value !important; }
 		}
 	}
 }
 
-// .col-#{breakpoint}-#{value},
-// .offset-#{breakpoint}-#{value}
-// .order-#{breakpoint}-#{value}
-@mixin set-grid-class($breakpoint, $prefix: null, $total-cols: 12) {
+@mixin breakpoint-col-classes($breakpoint, $prefix: null, $total-cols: 12) {
 	.#{$prefix}col#{$breakpoint}-auto{
 		flex-basis: 0;
 		flex-grow: 1;
