@@ -28,7 +28,7 @@ Then import required components and hooks to use them:
 ## API
 this package exports the following components and hooks. **Notice all props are optional**.
 
-#### Row
+### Row
 `Row` component is a flex container which means it's a wrapper for `Col`. In addition to all common html attributes like tabIndex, aria attributes, events and ... it supports the following props:
 
 | Prop | Default | Description
@@ -37,7 +37,7 @@ this package exports the following components and hooks. **Notice all props are 
 | children | | the content of `Row`. It is recommended to use `Col` components inside `Row`
 | className | | Adds extra custom classes to `Row`
 | class | | Another way of adding extra classes to `Row`. It is same as className.
-| reverse | false | Reverses the order of items inside `Row`
+| reverse | false | Reverses the order of items inside `Row`. Possible values are `true` and `false`
 | gutters | `'normal'` | Determines padding for each `Col` inside `Row`. possible values are `'normal'`, `'dense'` and `'none'`.
 | justify | | Horizontal position of items inside `Row` (sets justify-content css property). Possible Values are `'center'`, `'end'`, `'left'`, `'right'`, `'space-around'`, `'space-between'`, `'space-evenly'`, `'start'` and `'stretch'`
 | justify-sm | | Same as justify but for small screens and upper
