@@ -1,5 +1,5 @@
 # React-Gridizer
-A simple-to-use React library to create responsive applications
+A simple-to-use and lightweight React package for creating responsive applications
 
 ## Installation
 `yarn add react-gridizer`  
@@ -7,53 +7,83 @@ or
 `npm install react-gridizer`
 
 ## Usage
-First import the css file:  
+Import styles:  
 `import react-gridizer/index.css;`  
+Since each imported CSS class has a prefix, you don't have to worry about any interference.
 
-Then import required components and hooks to use them:  
+Import required modules to use them:  
 `import {Row, Col, Spacer, useBreakpoints};`
 
 ## Features
 ✔ Simple-to-use responsive components  
-✔ No `Flex` knowledge required  
+✔ No CSS flex knowledge is required to use this package.  
 ✔ Lightweight (28KB in total)  
-✔ Support for `Typescript`  
-✔ Support for `RTL`  
-✔ `kebab-case` props  
-✔ Customizable html tags  
+✔ Prefixed CSS classes to prevent style interference  
+✔ Support for Typescript  
+✔ Support for RTL  
+✔ kebab-case props  
+✔ Customizable HTML tags  
 ✔ `useBreakpoints` hook for listening to screen resize and breakpoint changes  
 ✔ `Spacer` component to distribute remaining width  
 ✔ bootstrap-like `Col` in `Row` structure
 
 ## API
-this package exports the following components and hooks. **Notice all props are optional**.
+this package exports the following modules. **Notice all props are optional**.
 
 ### Row
-`Row` component is a flex container which means it's a wrapper for `Col`. In addition to all common html attributes like tabIndex, aria attributes, events and ... it supports the following props:
+`Row` component is a flex container which means it's a wrapper for `Col`. In addition to all common HTML attributes like tabIndex, aria attributes, events, and ... it supports the following props:
 
-| Prop | Default | Description
+| Row Prop | Default | Description
 | :-----------: | :-----------: | :----------- |
-| tag | `'div'` | the html tag for `Row`. Some examples are `div`, `ul`, `span` and etc
-| children | | the content of `Row`. It is recommended to use `Col` components inside `Row`
+| tag | `'div'` | The HTML tag for `Row`. Some examples are `div`, `ul` and `span`
+| children | | The content of `Row`. It is recommended to use `Col` components inside `Row`
 | className | | Adds extra custom classes to `Row`
-| class | | Another way of adding extra classes to `Row`. It is same as className.
-| reverse | false | Reverses the order of items inside `Row`. Possible values are `true` and `false`
+| class | | Another way of adding extra classes to `Row`. It is the same as className.
+| reverse | `false` | Reverses the order of items inside `Row`. Possible values are `true` and `false`
 | gutters | `'normal'` | Determines padding for each `Col` inside `Row`. possible values are `'normal'`, `'dense'` and `'none'`.
-| justify | | Horizontal position of items inside `Row` (sets justify-content css property). Possible Values are `'center'`, `'end'`, `'left'`, `'right'`, `'space-around'`, `'space-between'`, `'space-evenly'`, `'start'` and `'stretch'`
+| justify | | Determines the horizontal position of items inside `Row` (sets `justify-content` CSS property). Possible Values are `'center'`, `'end'`, `'left'`, `'right'`, `'space-around'`, `'space-between'`, `'space-evenly'`, `'start'` and `'stretch'`
 | justify-sm | | Same as justify but for small screens and upper
 | justify-md | | Same as justify but for medium screens and upper
 | justify-lg | | Same as justify but for large screens and upper
-| justify-xl | | Same as justify but for extra large screens and upper
-| align | | Vertical position of each item inside `Row` (sets align-items css property). Possible Values are `'baseline'`, `'center'`, `'end'`, `'start'` and `'stretch'`
+| justify-xl | | Same as justify but for extra-large screens and upper
+| align | | Determines the vertical position of each item inside `Row` (sets `align-items` css property). Possible Values are `'baseline'`, `'center'`, `'end'`, `'start'` and `'stretch'`
 | align-sm | | Same as align but for small screens and upper
 | align-md | | Same as align but for medium screens and upper
 | align-lg | | Same as align but for large screens and upper
-| align-xl | | Same as align but for extra large screens and upper
-| align-content | | Vertical position of all items inside `Row` (sets align-content css property). Possible Values are `'baseline'`, `'center'`, `'end'`, `'space-around'`, `'space-between'`, `'space-evenly'`, `'start'` and `'stretch'`
+| align-xl | | Same as align but for extra-large screens and upper
+| align-content | | Determines the vertical position of all items inside `Row` as a group (sets `align-content` CSS property). Possible Values are `'baseline'`, `'center'`, `'end'`, `'space-around'`, `'space-between'`, `'space-evenly'`, `'start'` and `'stretch'`
 | align-content-sm | | Same as align-content but for small screens and upper
 | align-content-md | | Same as align-content but for medium screens and upper
 | align-content-lg | | Same as align-content but for large screens and upper
-| align-content-xl | | Same as align-content but for extra large screens and upper
+| align-content-xl | | Same as align-content but for extra-large screens and upper
 
+### Col
+`Col` component is a flex item which means it should be used inside `Row`. In addition to all common HTML attributes like tabIndex, aria attributes, events, and ... it supports the following props:
 
+| Col Prop | Default | Description
+| :-----------: | :-----------: | :----------- |
+| tag | `'div'` | The HTML tag for `Col`. Some examples are `div`, `li` and `h3`
+| children | | The content of `Col`.
+| className | | Adds extra custom classes to `Col`
+| class | | Another way of adding extra classes to `Col`. It is the same as className.
+| cols | | Determines the width of `Col` inside `Row` (sets `flex-basis` and `max-width` CSS properties). Possible Values are `'auto'`, `'unset'` or a number from 1 to 12. `'unset'` items fit content and `'auto'` items fill remaining empty space.
+| sm | | Same as cols but for small screens and upper
+| md | | Same as cols but for medium screens and upper
+| lg | | Same as cols but for large screens and upper
+| xl | | Same as cols but for extra-large screens and upper
+| order | | Determines the order of `Col` inside `Row` (sets `order` CSS property). minimum valid number is 1 and maximum is 12.
+| order-sm | | Same as order but for small screens and upper
+| order-md | | Same as order but for medium screens and upper
+| order-lg | | Same as order but for large screens and upper
+| order-xl | | Same as order but for extra-large screens and upper
+| offset | | Determines the start margin of `Col` in a way that each number is multiplied by 4px (sets `margin-inline-start` CSS property). minimum valid number is 1 and maximum is 11.
+| offset-sm | | Same as offset but for small screens and upper
+| offset-md | | Same as offset but for medium screens and upper
+| offset-lg | | Same as offset but for large screens and upper
+| offset-xl | | Same as offset but for extra-large screens and upper
+| align-self | | Determines the vertical position of `Col` item inside `Row` (sets `align-self` CSS property). Possible Values are `'auto'`, `'baseline'`, `'center'`, `'end'`, `'start'` and `'stretch'`
+| align-self-sm | | Same as align-self but for small screens and upper
+| align-self-md | | Same as align-self but for medium screens and upper
+| align-self-lg | | Same as align-self but for large screens and upper
+| align-self-xl | | Same as align-self but for extra-large screens and upper
 
