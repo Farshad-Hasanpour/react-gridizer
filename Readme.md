@@ -7,25 +7,29 @@ A simple-to-use and lightweight React package for creating responsive applicatio
 
 For more examples [click to see CodeSandbox]()
 ```typescript jsx
-<Row>
-    <Col cols={12} sm={6} md={4} lg={3} xl={2}>first</Col>
-    <Col cols="12" xl="6">
+export default function Example(){
+    return (
         <Row>
-            <Col>first half</Col>
-            <Col>second half</Col>
+            <Col cols={12} sm={6} md={4} lg={3} xl={2}>first</Col>
+            <Col cols="12" xl="6">
+                <Row>
+                    <Col>first half</Col>
+                    <Col>second half</Col>
+                </Row>
+                <Row>
+                    <Spacer/>
+                    <Col>Right</Col>
+                </Row>
+            </Col>
+            <Col cols={12} xl="6">
+                <Row tag="ul" justify="space-between" align="center">
+                    <Col tag="ul" onClick={() => {}}></Col>
+                    <Col tag="ul" style={{}}></Col>
+                </Row>
+            </Col>
         </Row>
-        <Row>
-            <Spacer/>
-            <Col>Right</Col>
-        </Row>
-    </Col>
-    <Col cols={12} xl="6">
-        <Row tag="ul" justify="space-between" align="center">
-            <Col tag="ul" onClick={() => {}}></Col>
-            <Col tag="ul" style={{}}></Col>
-        </Row>
-    </Col>
-</Row>
+    );
+}
 ```
 
 ## Installation
