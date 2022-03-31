@@ -5,6 +5,29 @@
 # React-Gridizer
 A simple-to-use and lightweight React package for creating responsive applications
 
+Here is an example:
+```typescript jsx
+<Row>
+    <Col cols={12} sm={6} md={4} lg={3} xl={2}>first</Col>
+    <Col cols="12" xl="6">
+        <Row>
+            <Col>first half</Col>
+            <Col>second half</Col>
+        </Row>
+        <Row>
+            <Spacer/>
+            <Col>Right</Col>
+        </Row>
+    </Col>
+    <Col cols={12} xl="6">
+        <Row tag="ul" justify="space-between" align="center">
+            <Col tag="ul" onClick={() => {}}></Col>
+            <Col tag="ul" style={{}}></Col>
+        </Row>
+    </Col>
+</Row>
+```
+
 ## Installation
 `yarn add react-gridizer`  
 or  
@@ -12,11 +35,11 @@ or
 
 ## Usage
 Import styles:  
-`import react-gridizer/index.css;`  
+`import 'react-gridizer/index.css';`  
 Since each imported CSS class has a prefix, you don't have to worry about any interference.
 
 Import required modules to use them:  
-`import {Row, Col, Spacer, useBreakpoints};`
+`import {Row, Col, Spacer, useBreakpoints} from 'react-gridizer';`
 
 ## Features
 ✔ Simple-to-use responsive components  
