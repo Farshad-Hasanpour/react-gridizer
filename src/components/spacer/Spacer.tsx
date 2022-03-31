@@ -7,12 +7,14 @@ interface SpacerProps extends React.HTMLAttributes<HTMLElement> {
 	"tag"?: React.ElementType,
 	"children"?: React.ReactNode,
 	"className"?: string,
+	"class"?: string,
 }
 
 const Spacer = React.forwardRef<HTMLElement, SpacerProps>(({
 	'tag': Tag = 'div',
 	children,
 	className = '',
+	'class': otherClasses = '',
 	...otherProps
 }, ref) => {
 	const prefix = process.env.CSS_PREFIX || '';
@@ -23,6 +25,7 @@ const Spacer = React.forwardRef<HTMLElement, SpacerProps>(({
 			className={$c(
 				prefix+'spacer',
 				className,
+				otherClasses
 			)}
 		>
 			{children}

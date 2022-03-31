@@ -8,6 +8,7 @@ interface RowProps extends React.HTMLAttributes<HTMLElement> {
 	"tag"?: React.ElementType,
 	"children"?: React.ReactNode,
 	"className"?: string,
+	"class"?: string,
 	"reverse"?: boolean,
 	"gutters"?: 'normal' | 'dense' | 'none',
 	"justify"?: JustifyContent,
@@ -31,6 +32,7 @@ const Row = React.forwardRef<HTMLElement, RowProps>(({
 	'tag': Tag = 'div',
 	children,
 	className = '',
+	'class': otherClasses = '',
 	reverse = false,
 	'gutters': gutters = 'normal',
 	'justify': justify,
@@ -57,7 +59,8 @@ const Row = React.forwardRef<HTMLElement, RowProps>(({
 			ref={ref}
 			className={$c(
 				className,
-				'rr-row',
+				otherClasses,
+				prefix+'row',
 				gutters !== 'none' ? prefix+'gutters--'+gutters : '',
 				reverse ? prefix+'row--reverse' : '',
 				justify ? prefix+'justify-'+justify : '',

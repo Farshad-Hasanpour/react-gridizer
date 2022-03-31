@@ -10,6 +10,7 @@ interface ColProps extends React.HTMLAttributes<HTMLElement> {
 	"tag"?: React.ElementType,
 	"children"?: React.ReactNode,
 	"className"?: string,
+	"class"?: string,
 	"cols"?: Size,
 	"sm"?: Size,
 	"md"?: Size,
@@ -36,6 +37,7 @@ const Col = React.forwardRef<HTMLElement, ColProps>(({
 	'tag': Tag = 'div',
 	'children': children,
 	'className': className = '',
+	'class': otherClasses = '',
 	cols = 'auto',
 	sm,
 	md,
@@ -65,6 +67,7 @@ const Col = React.forwardRef<HTMLElement, ColProps>(({
 			ref={ref}
 			className={$c(
 				className,
+				otherClasses,
 				cols ? prefix+'col-'+cols : '',
 				sm ? prefix+'col-sm-'+sm : '',
 				md ? prefix+'col-md-'+md : '',
