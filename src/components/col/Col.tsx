@@ -5,6 +5,8 @@ import { AlignSelf } from "../flexTypes";
 import {classNames as $c} from "../../utils/functions";
 
 type Size = number | 'unset' | 'auto' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12';
+type Offset = number | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11';
+type Order = number | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12';
 
 interface ColProps extends React.HTMLAttributes<HTMLElement> {
 	"tag"?: React.ElementType,
@@ -16,16 +18,16 @@ interface ColProps extends React.HTMLAttributes<HTMLElement> {
 	"md"?: Size,
 	"lg"?: Size,
 	"xl"?: Size,
-	"order"?: number,
-	"order-sm"?: number,
-	"order-md"?: number,
-	"order-lg"?: number,
-	"order-xl"?: number,
-	"offset"?: number,
-	"offset-sm"?: number,
-	"offset-md"?: number,
-	"offset-lg"?: number,
-	"offset-xl"?: number,
+	"order"?: Order,
+	"order-sm"?: Order,
+	"order-md"?: Order,
+	"order-lg"?: Order,
+	"order-xl"?: Order,
+	"offset"?: Offset,
+	"offset-sm"?: Offset,
+	"offset-md"?: Offset,
+	"offset-lg"?: Offset,
+	"offset-xl"?: Offset,
 	"align-self"?: AlignSelf,
 	"align-self-sm"?: AlignSelf,
 	"align-self-md"?: AlignSelf,

@@ -58,8 +58,10 @@
 			flex-basis: $size;
 			max-width: $size;
 		}
-		.#{$prefix}offset#{$breakpoint}-#{$i} {
-			margin-inline-start: $size;
+		@if($i != 12){
+			.#{$prefix}offset#{$breakpoint}-#{$i} {
+				margin-inline-start: $size;
+			}
 		}
 		.#{$prefix}order#{$breakpoint}-#{$i} {
 			order: $i;
