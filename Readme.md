@@ -5,7 +5,7 @@
 # React-Gridizer
 A simple-to-use and lightweight React package for creating responsive applications
 
-Here is an example:
+For more examples [click to see CodeSandbox]()
 ```typescript jsx
 <Row>
     <Col cols={12} sm={6} md={4} lg={3} xl={2}>first</Col>
