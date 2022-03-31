@@ -1,9 +1,8 @@
-# React-Gridizer
-
 <p align="center">
     <img alt="React Gridizer Logo" width="168" src="https://raw.githubusercontent.com/Farshad-Hasanpour/react-bidimensional-grid-system/master/logo.svg?token=GHSAT0AAAAAABRYCQHQ2D4T7MBCDKQGEZRSYSGBUNA">
 </p>
 
+# React-Gridizer
 A simple-to-use and lightweight React package for creating responsive applications
 
 ## Installation
