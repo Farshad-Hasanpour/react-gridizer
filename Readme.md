@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="React Gridizer Logo" width="168" src="https://raw.githubusercontent.com/Farshad-Hasanpour/react-bidimensional-grid-system/master/logo.svg?token=GHSAT0AAAAAABRYCQHQ2D4T7MBCDKQGEZRSYSGBUNA">
+    <img alt="React Gridizer Logo" width="168" src="https://raw.githubusercontent.com/Farshad-Hasanpour/react-bidimensional-grid-system/master/logo.svg">
 </p>
 
 # React-Gridizer
@@ -39,7 +39,7 @@ this package exports the following modules. **Notice all props are optional**.
 
 | Row Prop | Default | Description
 | :-----------: | :-----------: | :----------- |
-| tag | `'div'` | The HTML tag for `Row`. Some examples are `div`, `ul` and `span`
+| tag | `'div'` | The HTML tag for `Row`. Some examples are `div`, `ul`, and `span`
 | children | | The content of `Row`. It is recommended to use `Col` components inside `Row`
 | className | | Adds extra custom classes to `Row`
 | class | | Another way of adding extra classes to `Row`. It is the same as className.
@@ -50,7 +50,7 @@ this package exports the following modules. **Notice all props are optional**.
 | justify-md | | Same as justify but for medium screens and upper
 | justify-lg | | Same as justify but for large screens and upper
 | justify-xl | | Same as justify but for extra-large screens and upper
-| align | | Determines the vertical position of each item inside `Row` (sets `align-items` css property). Possible Values are `'baseline'`, `'center'`, `'end'`, `'start'` and `'stretch'`
+| align | | Determines the vertical position of each item inside `Row` (sets `align-items` CSS property). Possible Values are `'baseline'`, `'center'`, `'end'`, `'start'` and `'stretch'`
 | align-sm | | Same as align but for small screens and upper
 | align-md | | Same as align but for medium screens and upper
 | align-lg | | Same as align but for large screens and upper
@@ -66,21 +66,21 @@ this package exports the following modules. **Notice all props are optional**.
 
 | Col Prop | Default | Description
 | :-----------: | :-----------: | :----------- |
-| tag | `'div'` | The HTML tag for `Col`. Some examples are `div`, `li` and `h3`
+| tag | `'div'` | The HTML tag for `Col`. Some examples are `div`, `li`, and `h3`
 | children | | The content of `Col`.
 | className | | Adds extra custom classes to `Col`
 | class | | Another way of adding extra classes to `Col`. It is the same as className.
-| cols | | Determines the width of `Col` inside `Row` (sets `flex-basis` and `max-width` CSS properties). Possible Values are `'auto'`, `'unset'` or a number from 1 to 12. `'unset'` items fit content and `'auto'` items fill remaining empty space.
+| cols | | Determines the width of `Col` inside `Row` (sets `flex-basis` and `max-width` CSS properties). Possible Values are `'auto'`, `'unset'` or a number from 1 to 12. `'unset'` items fit the content and `'auto'` items fill the remaining space.
 | sm | | Same as cols but for small screens and upper
 | md | | Same as cols but for medium screens and upper
 | lg | | Same as cols but for large screens and upper
 | xl | | Same as cols but for extra-large screens and upper
-| order | | Determines the order of `Col` inside `Row` (sets `order` CSS property). minimum valid number is 1 and maximum is 12.
+| order | | Determines the order of `Col` inside `Row` (sets `order` CSS property). The minimum valid number is 1 and the maximum is 12.
 | order-sm | | Same as order but for small screens and upper
 | order-md | | Same as order but for medium screens and upper
 | order-lg | | Same as order but for large screens and upper
 | order-xl | | Same as order but for extra-large screens and upper
-| offset | | Determines the start margin of `Col` in a way that each number is multiplied by 4px (sets `margin-inline-start` CSS property). minimum valid number is 1 and maximum is 11.
+| offset | | Determines the start margin of `Col` in a way that each number is multiplied by 4px (sets `margin-inline-start` CSS property). The minimum valid number is 1 and the maximum is 11.
 | offset-sm | | Same as offset but for small screens and upper
 | offset-md | | Same as offset but for medium screens and upper
 | offset-lg | | Same as offset but for large screens and upper
@@ -92,11 +92,11 @@ this package exports the following modules. **Notice all props are optional**.
 | align-self-xl | | Same as align-self but for extra-large screens and upper
 
 ### Spacer
-`Spacer` component can be used to distribute remaining width in a row for example Placing `Spacer` between two `Col`s will push them to the sides. In addition to all common HTML attributes like tabIndex, aria attributes, events, and ... it supports the following props:
+`Spacer` component can be used to distribute the remaining width in a row, for example, Placing `Spacer` between two `Col`s will push them to the sides. In addition to all common HTML attributes like tabIndex, aria attributes, events, and ... it supports the following props:
 
 | Spacer Prop | Default | Description
 | :-----------: | :-----------: | :----------- |
-| tag | `'div'` | The HTML tag for `Spacer`. Some examples are `div`, `span` and `li`
+| tag | `'div'` | The HTML tag for `Spacer`. Some examples are `div`, `span`, and `li`
 | children | | The content of `Spacer`.
 | className | | Adds extra custom classes to `Spacer`
 | class | | Another way of adding extra classes to `Spacer`. It is the same as className.
