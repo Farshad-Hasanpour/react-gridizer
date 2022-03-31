@@ -7,6 +7,10 @@ A simple-to-use and lightweight React package for creating responsive applicatio
 
 For more examples [click to see CodeSandbox]()
 ```typescript jsx
+import React from 'react';
+import {Row, Col} from 'react-gridizer';
+import 'react-gridizer/index.css';
+
 export default function Example(){
     return (
         <Row>
