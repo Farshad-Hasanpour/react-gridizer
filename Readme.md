@@ -1,4 +1,9 @@
 # React-Gridizer
+
+||
+|:---:|
+|![Tux, the Linux mascot](./logo.png)|
+
 A simple-to-use and lightweight React package for creating responsive applications
 
 ## Installation
@@ -87,3 +92,32 @@ this package exports the following modules. **Notice all props are optional**.
 | align-self-lg | | Same as align-self but for large screens and upper
 | align-self-xl | | Same as align-self but for extra-large screens and upper
 
+### Spacer
+`Spacer` component can be used to distribute remaining width in a row for example Placing `Spacer` between two `Col`s will push them to the sides. In addition to all common HTML attributes like tabIndex, aria attributes, events, and ... it supports the following props:
+
+| Spacer Prop | Default | Description
+| :-----------: | :-----------: | :----------- |
+| tag | `'div'` | The HTML tag for `Spacer`. Some examples are `div`, `span` and `li`
+| children | | The content of `Spacer`.
+| className | | Adds extra custom classes to `Spacer`
+| class | | Another way of adding extra classes to `Spacer`. It is the same as className.
+
+### useBreakpoints
+this hook listens to screen size changes and exports screen width as well as active breakpoints. `useBreakpoints` has no parameter to set.
+
+```js
+return {
+    width: width,
+    xsOnly: width < 600,
+    smOnly: width >= 600 && width < 960,
+    smAndDown: width < 960,
+    smAndUp: width >= 600,
+    mdOnly: width >= 960 && width < 1280 - 16,
+    mdAndDown: width < 1280 - 16,
+    mdAndUp: width >= 960,
+    lgOnly: width >= 1280 - 16 && width < 1920 - 16,
+    lgAndDown: width < 1920 - 16,
+    lgAndUp: width >= 1280,
+    xlOnly: width >= 1920 - 16,
+}
+```

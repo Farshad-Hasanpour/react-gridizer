@@ -6,10 +6,13 @@ function set(width: number){
 		xsOnly: width < 600,
 		smOnly: width >= 600 && width < 960,
 		smAndDown: width < 960,
-		mdOnly: width >=960 && width < 1280 - 16,
+		smAndUp: width >= 600,
+		mdOnly: width >= 960 && width < 1280 - 16,
 		mdAndDown: width < 1280 - 16,
+		mdAndUp: width >= 960,
 		lgOnly: width >= 1280 - 16 && width < 1920 - 16,
 		lgAndDown: width < 1920 - 16,
+		lgAndUp: width >= 1280,
 		xlOnly: width >= 1920 - 16,
 	}
 }
