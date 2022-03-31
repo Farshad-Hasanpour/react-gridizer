@@ -1,8 +1,8 @@
 # React-Gridizer
 
-||
-|:---:|
-|![Tux, the Linux mascot](./logo.png)|
+<p align="center">
+    <img alt="React Gridizer Logo" width="128" src="https://raw.githubusercontent.com/Farshad-Hasanpour/react-bidimensional-grid-system/master/logo.svg?token=GHSAT0AAAAAABRYCQHQ2D4T7MBCDKQGEZRSYSGBUNA">
+</p>
 
 A simple-to-use and lightweight React package for creating responsive applications
 
