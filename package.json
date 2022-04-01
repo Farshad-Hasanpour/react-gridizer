@@ -1,6 +1,6 @@
 {
 	"name": "react-gridizer",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "A simple-to-use and lightweight React package for creating responsive applications",
 	"main": "./lib/index.js",
 	"repository": "https://github.com/farshad-hasanpour/react-gridizer",
