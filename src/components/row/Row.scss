@@ -10,12 +10,12 @@
 .#{$prefix}row--reverse{
 	flex-direction: row-reverse;
 }
-.#{$prefix}row.rr-gutters--normal{
+.#{$prefix}row.#{$prefix}gutters--normal{
 	> *{
 		padding: 12px;
 	}
 }
-.#{$prefix}row.rr-gutters--dense{
+.#{$prefix}row.#{$prefix}gutters--dense{
 	> *{
 		padding: 8px;
 	}
