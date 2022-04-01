@@ -1,12 +1,9 @@
 {
 	"name": "react-gridizer",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "A simple-to-use and lightweight React package for creating responsive applications",
 	"main": "./lib/index.js",
 	"repository": "https://github.com/farshad-hasanpour/react-gridizer",
-	"publishConfig": {
-		"registry": "https://npm.pkg.github.com"
-	},
 	"types": "index.d.ts",
 	"scripts": {
 		"build": "rm -rf ./lib && webpack --config ./webpack/webpack.config.js --env MODE=prod",
