@@ -3,7 +3,7 @@ import { ColType } from './src/components/col/Col';
 import { SpacerType } from './src/components/spacer/Spacer';
 import { useBreakpointsType } from "./src/hooks/useBreakpoints";
 
-declare module "@farshad-hasanpour/react-bidimensional-grid-system"{
+declare module "@farshad-hasanpour/react-gridizer"{
 	export const Row: RowType;
 	export const Col: ColType;
 	export const Spacer: SpacerType;

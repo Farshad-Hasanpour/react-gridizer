@@ -3,37 +3,24 @@
 </p>
 
 # React-Gridizer
-A simple-to-use and lightweight React package for creating responsive applications
+A simple-to-use and lightweight React grid package for creating responsive applications
 
-For more examples [click to see CodeSandbox]()
+## Examples
+For more examples [click to visit CodeSandbox]()
+
+Basic example:
 ```typescript jsx
-import React from 'react';
-import {Row, Col} from 'react-gridizer';
-import 'react-gridizer/index.css';
-
-export default function Example(){
-    return (
-        <Row>
-            <Col cols={12} sm={6} md={4} lg={3} xl={2}>first</Col>
-            <Col cols="12" xl="6">
-                <Row>
-                    <Col>first half</Col>
-                    <Col>second half</Col>
-                </Row>
-                <Row>
-                    <Spacer/>
-                    <Col>Right</Col>
-                </Row>
-            </Col>
-            <Col cols={12} xl="6">
-                <Row tag="ul" justify="space-between" align="center">
-                    <Col tag="ul" onClick={() => {}}></Col>
-                    <Col tag="ul" style={{}}></Col>
-                </Row>
-            </Col>
-        </Row>
-    );
-}
+<Row>
+    <Col cols={12} sm={6} md={4} lg="3" xl={2}>
+        First
+    </Col>
+    <Col cols="unset">
+        Second
+    </Col>
+    <Col>
+        Third
+    </Col>
+</Row>
 ```
 
 ## Installation
@@ -43,7 +30,7 @@ or
 
 ## Usage
 Import styles:  
-`import 'react-gridizer/index.css';`  
+`import 'react-gridizer/lib/index.css';`  
 Since each imported CSS class has a prefix, you don't have to worry about any interference.
 
 Import required modules to use them:  

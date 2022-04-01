@@ -1,9 +1,9 @@
 {
-	"name": "@farshad-hasanpour/react-bidimensional-grid-system",
-	"version": "0.0.29",
-	"description": "A bidirectional grid system for React. This grid systems supports both horizontal and vertical directions using flex display.",
+	"name": "@farshad-hasanpour/react-gridizer",
+	"version": "0.0.32",
+	"description": "A simple-to-use and lightweight React package for creating responsive applications",
 	"main": "./lib/index.js",
-	"repository": "https://github.com/farshad-hasanpour/react-bidimensional-grid-system",
+	"repository": "https://github.com/farshad-hasanpour/react-gridizer",
 	"publishConfig": {
 		"registry": "https://npm.pkg.github.com"
 	},
@@ -14,12 +14,26 @@
 		"prepare": "yarn build",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"author": "Farshad Hasanpour",
-	"license": "ISC",
+	"author": "Farshad Hasanpour <farshad.hasanpour96@gmail.com>",
+	"license": "MIT",
 	"files": [
 		"lib/",
 		"src/",
 		"index.d.ts"
+	],
+	"bugs": {
+		"url": "https://github.com/farshad-hasanpour/react-gridizer/issues"
+	},
+	"homepage": "https://github.com/farshad-hasanpour/react-gridizer#readme",
+	"keywords": [
+		"grid",
+		"responsive",
+		"row",
+		"column",
+		"flex",
+		"justify",
+		"align",
+		"react"
 	],
 	"devDependencies": {
 		"@babel/core": "^7.17.5",
