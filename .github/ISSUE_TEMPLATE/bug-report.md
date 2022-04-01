@@ -21,6 +21,6 @@ A picture is worth a thousand words
 <!-- ![alt text](link here) -->
 
 ### Reproduction Link
-Modify this [codepen](https://codesandbox.io/s/react-gridizer-bug-report-template-yeok4g?file=/src/App.js) to demonstrate the problem clearly,
-just fork it and paste the resulting codepen in your issue.
+Modify this [Codepen](https://codesandbox.io/s/react-gridizer-bug-report-template-yeok4g?file=/src/App.js) to demonstrate the problem clearly,
+just fork it and paste the resulting Codepen into your issue.
 Please make sure this is a minimal example, containing only the minimum necessary code.
